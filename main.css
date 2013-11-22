@@ -1,0 +1,62 @@
+/* Reset FTW. */
+* {
+  -webkit-box-sizing: borderbox;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: white;
+  background: #333;
+  text-align: center;
+
+  /* This could probably be made a lot simpler... */
+  display: -webkit-box;
+  display: flexbox;
+  -webkit-box-align: center;
+  -webkit-flex-align: center;
+  -webkit-box-pack: center;
+  -webkit-flex-pack: center;
+  cursor: crosshair;
+}
+
+blockquote {
+  display: block;
+
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 800px;
+
+  opacity: 0;
+  cursor: none;
+  font-size: 25px;
+  line-height: 1.5em;
+  text-align: center;
+
+  -webkit-flex-flow: row;
+  -webkit-transition: all 250ms ease-in-out;
+  -webkit-transform: translateZ(1px);
+}
+
+blockquote:hover {
+  opacity: 1;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-filter: blur(50px);
+  -webkit-user-select: none;
+}
